@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="H" default="default" basedir=".">
+    <description>Builds, tests, and runs the project H.</description>
+    <import file="nbproject/build-impl.xml"/>
+     <property name="web.dir" value="C:/Users/HKhoumal/Documents/NetBeansProjects/H"></property>
+    <property name="src.dir" value="src"></property>
+    <property name="build.dir" value="${web.dir}/build/test/classes/utilitaire"></property>
+    <property name="reports.xml.dir" value="reports/xml"></property>
+    <property name="reports.html.dir" value="reports/html"></property>
+    <property name="name" value="H"></property>
+    <property name="tomcat-home" value="C:/Program Files/Apache Software Foundation/Apache Tomcat 8.0.27"></property>
+    <property file="build.properties"></property>
+
+    <path id="master-classpath">
+      <fileset dir="${web.dir}/build/web/WEB-INF/lib">
+      <include name="*.jar"/>
+      </fileset>
+      <pathelement path="${build.dir}"/>
+    </path>
+
+    <path id="catalina-ant-classpath">
+      <fileset dir="${appserver.lib}">
+      <include name="catalina-ant.jar"/>
+      </fileset>
+    </path>
+
+    <path id="libs">
+      <fileset includes="*.jar" dir="${tomcat-home}/bin" />
+      <fileset includes="*.jar" dir="${tomcat-home}/lib" />
+    </path>
+
+    <path id="master-test">
+      <fileset dir="${web.dir}/build/web/WEB-INF/lib">
+        <include name="*.jar"/>
+      </fileset>
+      <pathelement location="${web.dir}/build/test/classes/utilitaire"/>
+    </path>
+
+    <target name="clean" description="Effacer">
+      <delete>
+        <fileset dir="${build.dir}">
+          <include name="**/*.class"/>
+        </fileset>
+      </delete>
+    </target>
+    
+    <target name="build" description="build">
+      <mkdir dir="${build.dir}"/>
+      <javac destdir="${build.dir}" source="${ant.java.version}" target="${ant.java.version}" debug="true" 
+      optimize="false" deprecation="false" failonerror="true" includeantruntime="false">
+      <src path="${src.dir}"/>
+      <classpath refid="master-classpath"/>
+      </javac>
+    </target>
+
+    <target name="junit" >
+      <echo>Run junit</echo>
+      <mkdir dir="${reports.xml.dir}"/>
+      <junit haltonfailure="false" printsummary="true" fork="true" failureproperty="test.failures">
+        <classpath refid="master-test" />
+        <classpath location="${web.dir}/WebContent/WEB-INF/lib/junit.jar" />
+        <classpath location="${web.dir}/WebContent/WEB-INF/lib/org.hamcrest.core_1.3.0.v201303031735.jar" />
+        <formatter type="xml" />
+        <test name="couleur.Couleur" todir="${reports.xml.dir}"/>
+      </junit>
+    </target>
+    
+   
+
+</project>

@@ -1,0 +1,275 @@
+body{
+	background-image: url("../image/bg8.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+        background-size: 100%;
+}
+
+#container{
+	width:950px;
+	height: 1080px;
+	border-radius: 2px;
+	margin:auto;
+
+}
+.table{
+    background-color : rgba(165,136,92,0.4);
+    color: #FFF;
+}
+.table tr:hover{
+    background-color: transparent !important;
+}
+#header {
+	width: 100%;
+	height: 150px;
+	
+}
+.entete{
+    width: 100%;
+    height: 150px;
+    margin-left: 250px;
+}
+.isLink{
+    text-decoration: none;
+    color:black;
+}
+.search{
+
+	right:10px;
+	height: 40px;
+	border-radius: 50px;
+	width: 150px;
+	 -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+
+}
+.rech{
+    float: left;
+    margin-right: 250px;
+    
+}
+.tg{
+    width:100px;
+    margin:auto;
+}
+.tg a{
+    color:rgb(255,255,233);
+}
+.icon_search{
+	position: relative;
+	right: 25px;
+}
+.search:focus{
+	width: 250px;
+}
+.search:hover{
+		width: 250px;
+}
+.recherche{
+	height:45px;
+	margin-bottom: 5px;
+}
+
+#content {
+	width:100%;
+	height: 950px;
+	border-radius: 5px;
+	box-shadow: 10px -5px 150px rgb(145,116,82);
+        background-color: rgba(146,116,82,0.25);
+}
+#contentlog{
+	width: 350px;
+	height: 200px;
+	box-shadow: 10px -5px 150px rgb(155,155,250);
+	margin:auto;
+}
+.form-group label{
+	margin: auto;
+	text-align: center;
+}
+.form-control{
+	width: 200px !important;
+	margin: auto;
+}
+.navbar{
+	padding: 0px !important;
+	margin: 0px !important;
+
+
+}
+.un{
+	padding-top:25px;
+
+}
+.deux{
+	box-shadow: 10px -5px 150px #FFF;
+}
+.huge{
+	font-size: 35px;
+}
+.nom{
+	font-size: 25px;
+	font-style: italic;
+
+}
+.menu{
+	padding-top: 0px;
+	margin-top: -2px;
+	width: 50px;
+	height: 1000px;
+	float: left;
+	background-color: #222222;
+	border-radius: 2px;
+
+}
+.menu ul {
+	list-style:none;
+	text-decoration: none;
+	text-align: center;
+	margin:0px;
+	padding: 0;
+	margin-top:3px;
+
+
+}
+.menu ul li{
+	height: 50px;
+	padding-top:10px;
+}
+.menu a{
+	color:#FFF;
+}
+#contentAdd{
+	box-shadow: 10px -5px 150px rgba(165,136,92,1);
+	width: 350px;
+	min-height: 550px;
+	margin: auto;
+	margin-top:60px;
+	padding-top: 25px;
+}
+#updatePersonnel{
+        box-shadow: 10px -5px 150px rgba(165,136,92,1);
+	width: 350px;
+	min-height: 550px;
+	margin: auto;
+	margin-top:60px;
+	padding-top: 25px;
+}
+#ajouter{
+	margin: auto;
+	margin-left: 125px;
+	color: #FFF;
+}
+.lien{
+	color: #FFF;
+        text-decoration: none;
+}
+.lien:hover{
+    text-decoration: none;
+}
+#critere{
+    float:right;
+    width:250px;
+    height: 400px;
+    border: solid 1px #FF0;
+    background-color: rgb(165,136,92); 
+    text-align: center;
+    z-index: 9000;
+    right: 240px;
+    position: absolute;
+}
+#toggle:hover{
+    cursor: pointer;
+}
+
+.panier{
+    height: 50px;
+    margin-top: 7px;
+    
+}
+#MonPanier{
+    width:500px;
+    border:solid 1px #f2dede;
+    border-radius: 3px;
+    margin:auto;
+    box-shadow: 4px 4px 1px 1px rgb(159,131,88);
+    position:absolute;
+    z-index: 1000;
+    top:250px;
+    right: 100px;
+    background:rgb(162,133,87);
+}
+.facture{
+    padding-top:25px;
+    width: 700px;
+    border-radius: 5px;
+    margin:auto;
+    text-align: center;
+}
+.facture table th{
+    color:#23527c;
+    text-align: center;
+}
+.ui-datepicker{
+        margin-top:-30px;
+	width:200px;
+        margin-left: 200px;
+        color:#000 !important;
+}
+.ui-datepicker-header{
+	background-color:#A5895A;
+	color:#000 !important;
+}
+.ui-datepicker-header a{
+	color:#000;
+}
+.ui-datepicker-title{
+	margin: auto;
+	text-align: center;
+	border-top:double 1px #FFF;
+        color:#000 !important;
+}
+.ui-datepicker-prev{
+	margin-left: 3px;
+}
+.ui-datepicker-prev:hover{
+	color:#FFF;
+	cursor: pointer;
+}
+.ui-datepicker-next{
+	float: right;
+	margin-right: 3px;
+	
+}
+.ui-datepicker-prev:hover{
+    text-decoration: none;
+    cursor:pointer;
+}
+.ui-datepicker-next:hover{
+    text-decoration: none;
+    cursor:pointer;
+}
+.ui-datepicker-next:hover{
+	color:#FFF;
+	cursor: pointer;
+}
+.ui-datepicker-calendar{
+     padding-left:10px;
+        box-shadow: 3px 3px 30px rgb(165,136,92);
+	width:200px;
+	background-color: rgba(165,136,92,0.2) !important;
+	color:#FFF !important;
+}
+.ui-datepicker-calendar a{
+	color: #000;
+}
+.ui-datepicker-calendar a:hover{
+	
+	cursor: pointer;
+        text-decoration: none;
+        color:rgb(156,128,81);
+}
+
+.err_selected{
+    border-color:#F00;
+}
